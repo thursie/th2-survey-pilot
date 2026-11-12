@@ -4,7 +4,7 @@ window.TH2_CONFIG = Object.freeze({
   "dataMode": "TEST",
   "version": "0.2.1-TEST",
   "studyKey": "TH2-PILOT-TEST-20261112-v021",
-  "launchEnabled": true,
+  "launchEnabled": false,
   "autoRedirect": false,
   "forms": {
     "G1": {
