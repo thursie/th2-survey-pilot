@@ -9,19 +9,16 @@
   const surveyLink = document.getElementById('surveyLink');
   const key = 'th2-assignment-' + (cfg && cfg.studyKey || 'invalid');
   let configOkay = false;
-  let simulateStorageFailure = false;
 
   function show(text){ message.textContent = text; }
   function getStored() {
     try {
-      if (simulateStorageFailure) return null;
       const obj = JSON.parse(localStorage.getItem(key) || 'null');
       return obj && rand.GROUPS.includes(obj.group) && /^TEST-P-[a-f0-9-]{32,36}$/i.test(obj.participantId || '') && Number.isFinite(Date.parse(obj.assignedAt)) && rand.safeSource(obj.source) === obj.source ? obj : null;
     } catch(e){ return null; }
   }
   function store(assignment){
     try {
-      if (simulateStorageFailure) return false;
       const serialized = JSON.stringify(assignment);
       localStorage.setItem(key, serialized);
       return localStorage.getItem(key) === serialized;
@@ -58,20 +55,11 @@
       rand.validateConfig(cfg);
       configOkay = true;
       button.disabled = false;
-      document.getElementById('testTools').hidden = false;
       document.getElementById('studyNotice').querySelector('strong').textContent = cfg.mode === 'PRODUCTION' ? 'Thông tin trước khi tham gia' : 'Chỉ chạy thử nghiệm kỹ thuật — không phải nghiên cứu chính thức.';
     } else {
       show('Chưa cấu hình đủ bốn Google Forms hoặc chưa bật thử nghiệm. Không thể tiếp tục.');
     }
   } catch(err){ show('Cấu hình lỗi: ' + err.message); }
-
-  document.getElementById('newTest').addEventListener('click', function(){
-    if (!configOkay) return;
-    try { localStorage.removeItem(key); } catch(e) {}
-    simulateStorageFailure = document.getElementById('simulateStorageFailure').checked;
-    result.hidden = true; surveyLink.href = '#'; button.disabled = false;
-    show(simulateStorageFailure ? 'TEST: đang mô phỏng bộ nhớ bị từ chối. Chưa tạo lượt mới.' : 'Đã xóa riêng mã phân nhóm TEST trên trình duyệt này. Chưa tạo lượt mới.');
-  });
 
   form.addEventListener('submit', function(event){
     event.preventDefault();
