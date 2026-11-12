@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Khảo sát về thông tin đánh giá khách sạn — TH2 PILOT</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js" defer></script>
+  <script src="random.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div class="eyebrow">TH2 PILOT · CHỈ KIỂM THỬ TEST</div>
+      <h1>Khảo sát về thông tin đánh giá khách sạn</h1>
+      <p class="lede">Vui lòng đọc phần giới thiệu và xác nhận điều kiện tham gia trước khi bắt đầu.</p>
+    </header>
+    <section class="notice" id="studyNotice">
+      <strong>Chưa thu thập dữ liệu chính thức.</strong>
+      <p>Chỉ tài khoản thử nghiệm được chỉ định mới được gửi phiếu TEST. Trang này chỉ dùng để kiểm thử kỹ thuật. Thông tin nghiên cứu, thời lượng, quyền rút lui, bảo mật dữ liệu và đầu mối liên hệ cần được thay bằng nội dung do giảng viên hướng dẫn phê duyệt trước khi triển khai thật.</p>
+    </section>
+    <form id="entryForm" novalidate>
+      <fieldset>
+        <legend>Điều kiện tham gia</legend>
+        <div class="item">
+          <p>Bạn đã đủ 18 tuổi chưa?</p>
+          <label><input type="radio" name="age" value="yes" required> Có</label>
+          <label><input type="radio" name="age" value="no"> Không</label>
+        </div>
+        <div class="item">
+          <p>Trong 12 tháng qua, bạn đã từng đọc đánh giá về khách sạn trên trang đặt phòng hoặc trang du lịch chưa?</p>
+          <label><input type="radio" name="reviews" value="yes" required> Có</label>
+          <label><input type="radio" name="reviews" value="no"> Không</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Đồng ý tự nguyện</legend>
+        <label class="check"><input type="checkbox" id="consent" required> Tôi đã đọc thông tin nghiên cứu ở trên và tự nguyện đồng ý tham gia bản thử nghiệm.</label>
+      </fieldset>
+      <button type="submit" id="startButton" disabled>Tiếp tục đến bảng hỏi</button>
+      <p role="status" aria-live="polite" id="message" class="message"></p>
+    </form>
+    <section id="result" class="result" hidden>
+      <h2>Bảng hỏi đã sẵn sàng</h2>
+      <p>Nhấn nút bên dưới để vào đúng phiên bản của bạn. Nếu bộ nhớ trình duyệt hoạt động, mở lại sẽ giữ cùng phiên bản. Nếu không lưu được, trang sẽ thông báo rõ.</p>
+      <a class="button" id="surveyLink" rel="noreferrer noopener" href="#">Mở bảng hỏi</a>
+    </section>
+    <p class="footnote">Trang này cố gắng lưu một mã TEST ngẫu nhiên và nhóm khảo sát trong bộ nhớ trình duyệt để hạn chế phân nhóm lại. Không nhập thông tin cá nhân vào trang này. Trình duyệt khác hoặc chế độ riêng tư có thể được phân vào nhóm khác. Dữ liệu kỹ thuật của lượt truy cập có thể được nhà cung cấp dịch vụ lưu theo chính sách riêng.</p>
+  </main>
+</body>
+</html>

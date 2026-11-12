@@ -1,0 +1,25 @@
+:root { color-scheme: light; --ink:#193149; --muted:#52677a; --line:#dbe4eb; --blue:#185b8c; --paper:#fff; --bg:#f5f7f9; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.58 system-ui,-apple-system,"Segoe UI",sans-serif; }
+.shell { margin:28px auto; max-width:660px; padding:28px 26px 20px; background:var(--paper); border:1px solid var(--line); border-radius:13px; }
+.eyebrow { color:var(--blue); letter-spacing:.12em; font-size:11px; font-weight:750; }
+h1 { font-size:clamp(24px,4.8vw,31px); line-height:1.21; margin:12px 0; }
+.lede { color:var(--muted); margin-bottom:25px; }
+.notice { border-left:3px solid #c39a3a; background:#fcfaf3; padding:10px 14px; margin:20px 0; font-size:14px; }
+.notice p { margin:5px 0; }
+fieldset { border:0; border-top:1px solid var(--line); margin:20px 0 0; padding:16px 0 5px; }
+legend { font-size:16px; font-weight:700; padding:0 8px 0 0; }
+.item { margin-bottom:22px; }
+.item p { font-weight:650; margin:2px 0 9px; }
+label { display:block; padding:6px 4px; cursor:pointer; }
+input { accent-color:var(--blue); transform:scale(1.1); margin-right:9px; }
+label.check { line-height:1.55; }
+button, .button { font-family:inherit; font-size:16px; font-weight:700; line-height:1.2; display:inline-flex; align-items:center; justify-content:center; width:100%; min-height:48px; text-decoration:none; border:0; border-radius:8px; background:var(--blue); color:#fff; padding:12px 18px; cursor:pointer; }
+button:disabled { background:#98a8b6; cursor:not-allowed; }
+button:focus-visible, .button:focus-visible, input:focus-visible { outline:3px solid #b9d5f4; outline-offset:3px; }
+.message { min-height:22px; color:#9c3d30; font-size:14px; }
+.result { margin-top:18px; padding:14px; border:1px solid var(--line); border-radius:9px; background:#f8fbff; }
+.result h2 { margin:0 0 5px; font-size:19px; }
+.result p { color:var(--muted); font-size:14px; }
+.footnote { color:var(--muted); margin:27px 0 0; border-top:1px solid var(--line); padding-top:13px; font-size:12px; }
+@media (max-width:700px) { .shell{margin:0;padding:24px 17px 22px;border:0;border-radius:0;min-height:100vh} }
