@@ -1,24 +1,10 @@
 {
   "version": "0.2.1-TEST",
-  "status": "PREPARED / LOCAL_LOGIC_PASS / NOT_DEPLOYED",
-  "reference": "Nested TH2_GitHub_Randomizer_PILOT_v0.2_Claude.zip in TH2_Form_PILOT_bo_ban_giao_v0.2.zip",
-  "scope": "Only technical TEST; no official recruitment",
-  "delta": [
-    "Fill 4 existing Form URLs and 12 verified entry IDs",
-    "TEST-P-/TEST-N- prefixes; isolated TEST studyKey",
-    "Explicit visible storage-failure warning",
-    "Validate complete prefill fields and stored TEST assignment",
-    "Launch locked in deployment candidate; production mode blocked"
-  ],
-  "approvals_pending": [
+  "status": "APPROVED_TEST_WINDOW",
+  "gates": [
     "TH2-PILOT-LIMITED-TEST-05",
     "TH2-PILOT-PAGES-06"
   ],
-  "sha256": {
-    "app.js": "cd642df35b26c0bd6b2b0619454affa3e66ec0c92744d0c91a663a2f076a4dbc",
-    "config.js": "9d3101affa7419a2d8de63961eec187347fa3922cff8295e159aae160acc4330",
-    "index.html": "129a0b1e1c6a9b77cbecf0efaf6f604658d1a8d512486507c04c2f6fc9897d60",
-    "random.js": "d0ea35c53c26a5cd0ed4228a1071323dfa2d44e8a654d4abe0e9de87ac997bd9",
-    "styles.css": "6a4b788082efc7ce5b49e0894c748b2fedc863a0120336f4c2db4d668a7d92c6"
-  }
+  "officialCollection": false,
+  "diagnostics": "TEST-only assignment reset and simulated storage denial"
 }
